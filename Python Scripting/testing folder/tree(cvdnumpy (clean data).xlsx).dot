@@ -1,0 +1,51 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="Age <= 60.5\ngini = 0.57\nsamples = 100\nvalue = [34, 11, 55]"] ;
+1 [label="IL-6
+(pg/ml) <= 0.875\ngini = 0.545\nsamples = 55\nvalue = [34, 10, 11]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="IL-12p70
+(pg/ml) <= 0.15\ngini = 0.299\nsamples = 34\nvalue = [28, 5, 1]"] ;
+1 -> 2 ;
+3 [label="sTNFR2/sTNFR1 ratio <= 2.838\ngini = 0.494\nsamples = 9\nvalue = [4, 5, 0]"] ;
+2 -> 3 ;
+4 [label="sTNFR1 / TNFRSF1A (pg/ml) (R&D) <= 881.0\ngini = 0.32\nsamples = 5\nvalue = [4, 1, 0]"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 4\nvalue = [4, 0, 0]"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]"] ;
+4 -> 6 ;
+7 [label="gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]"] ;
+3 -> 7 ;
+8 [label="DcT (TACE - GAPDH) <= 3.35\ngini = 0.077\nsamples = 25\nvalue = [24, 0, 1]"] ;
+2 -> 8 ;
+9 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 24\nvalue = [24, 0, 0]"] ;
+8 -> 10 ;
+11 [label="1/DcT NLRP3 * 100 <= 16.875\ngini = 0.635\nsamples = 21\nvalue = [6, 5, 10]"] ;
+1 -> 11 ;
+12 [label="2^(-DcT)
+NLRP3 <= 10559410.0\ngini = 0.494\nsamples = 9\nvalue = [5, 4, 0]"] ;
+11 -> 12 ;
+13 [label="gini = 0.0\nsamples = 4\nvalue = [0, 4, 0]"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 5\nvalue = [5, 0, 0]"] ;
+12 -> 14 ;
+15 [label="TACE <= 28.56\ngini = 0.292\nsamples = 12\nvalue = [1, 1, 10]"] ;
+11 -> 15 ;
+16 [label="gini = 0.0\nsamples = 10\nvalue = [0, 0, 10]"] ;
+15 -> 16 ;
+17 [label="Hight in meters <= 1.725\ngini = 0.5\nsamples = 2\nvalue = [1, 1, 0]"] ;
+15 -> 17 ;
+18 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]"] ;
+17 -> 18 ;
+19 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]"] ;
+17 -> 19 ;
+20 [label="sTNFR2 / TNFRSF1B (pg/ml) (R&D) <= 1384.0\ngini = 0.043\nsamples = 45\nvalue = [0, 1, 44]"] ;
+0 -> 20 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+21 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]"] ;
+20 -> 21 ;
+22 [label="gini = 0.0\nsamples = 44\nvalue = [0, 0, 44]"] ;
+20 -> 22 ;
+}
